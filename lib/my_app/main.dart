@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lexicon/view/groups_screen/words_list_screen.dart';
+import 'package:lexicon/view/groups_screen/group_details_screen.dart';
 import 'package:lexicon/view/tabbar/tabbar_screen.dart';
 
 void main(List<String> args) {

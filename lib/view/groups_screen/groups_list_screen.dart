@@ -16,7 +16,10 @@ class GroupsListScreen extends StatelessWidget {
         return GroupWidget(
           text: text,
           onTap: () {
-            Navigator.of(context).pushNamed('/GroupDetailtsScreen');
+            Navigator.of(context).pushNamed(
+              '/GroupDetailtsScreen',
+              arguments: index,
+            );
           },
         );
       },

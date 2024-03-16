@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 class WordDetailsWidget extends StatelessWidget {
-  const WordDetailsWidget({super.key});
+  final String word;
+
+  const WordDetailsWidget({super.key, required this.word});
 
   @override
   Widget build(BuildContext context) {
+    const textStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 25,
+      color: Colors.white,
+    );
     return Container(
       height: 150,
       decoration: BoxDecoration(
@@ -15,31 +22,23 @@ class WordDetailsWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Stack(
           children: [
-            const Column(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Sport",
+                  word,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 25,
-                    color: Colors.white,
-                  ),
+                  style: textStyle,
                 ),
-                SizedBox(height: 10),
-                Divider(),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
+                const Divider(),
+                const SizedBox(height: 10),
                 Text(
-                  "Спорт",
+                  word,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 25,
-                    color: Colors.white,
-                  ),
+                  style: textStyle,
                 ),
               ],
             ),

@@ -9,9 +9,11 @@ class GroupDetailtsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final model = GroupModel();
 
+    final int index = ModalRoute.of(context)?.settings.arguments as int;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Group name"),
+        title: Text(model.groups[index].name),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(
@@ -29,11 +31,12 @@ class GroupDetailtsScreen extends StatelessWidget {
               bottom: 5,
             ),
             child: ListView.builder(
-              itemCount: model.groups.length,
-              itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  child: WordDetailsWidget(),
+              itemCount: model.groups[index].words.length,
+              itemBuilder: (context, int i) {
+                final word = model.groups[index].words[i];
+                return Padding(
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: WordDetailsWidget(word: word),
                 );
               },
             )),

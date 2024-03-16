@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class GroupWidget extends StatelessWidget {
   final Function onTap;
   final String text;
+
   const GroupWidget({
     super.key,
     required this.text,
