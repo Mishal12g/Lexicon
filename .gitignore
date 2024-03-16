@@ -1,0 +1,51 @@
+# IntelliJ/Android Studio
+*.iml
+/.idea
+/.idea/
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dictionaries
+/.idea/shelf
+/.idea/libraries
+/.idea/caches
+/.idea/modules.xml
+.idea/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Flutter/Dart
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/flutter_project/.ios
+**/ios/Pods/
+**/ios/.generated/
+**/android/.gradle/
+**/android/build/
+**/android/local.properties
+**/android/gradle.properties
+**/android/gradlew.bat
+**/android/gradlew
+**/android/.idea
+**/android/.android
+**/android/.flutter-plugins
+**/android/.flutter-plugins-dependencies
+**/android/.flutter-report
+**/android/.flutter-plugins-dependencies
+**/android/.flutter-plugins-dependencies
+**/build/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/flutter_assets
+.dart_tool/
+.packages
+.pub/
+/build/
+
+# Other
+*.lock
+*.log
+.DS_Store
+android/key.properties
+pubspec.lock
