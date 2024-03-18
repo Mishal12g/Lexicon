@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 class WordDetailsWidget extends StatelessWidget {
   final String word;
+  final String wordTranslate;
 
-  const WordDetailsWidget({super.key, required this.word});
+  const WordDetailsWidget(
+      {super.key, required this.word, required this.wordTranslate});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class WordDetailsWidget extends StatelessWidget {
                 const Divider(),
                 const SizedBox(height: 10),
                 Text(
-                  word,
+                  wordTranslate,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: textStyle,

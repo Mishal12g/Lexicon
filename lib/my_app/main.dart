@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:lexicon/view/groups_screen/group_details_screen.dart';
 import 'package:lexicon/view/tabbar/tabbar_screen.dart';
 
@@ -11,7 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
       routes: {
         '/': (context) => const TabBarScreen(),
         '/GroupDetailtsScreen': (context) => const GroupDetailtsScreen(),

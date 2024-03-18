@@ -1,6 +1,8 @@
+import 'package:lexicon/models/word.dart';
+
 final class Group {
   String name;
-  List<String> words;
+  List<Word> words;
 
   Group({
     required this.name,

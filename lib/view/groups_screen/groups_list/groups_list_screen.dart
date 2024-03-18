@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:lexicon/services/group_model.dart';
 import 'package:lexicon/view/components/group_widget.dart';
+import 'package:get/get.dart';
+import 'package:lexicon/view/groups_screen/groups_list/groups_list_controller.dart';
 
 class GroupsListScreen extends StatelessWidget {
   const GroupsListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final model = GroupModel();
+    GroupsListController c = Get.put(GroupsListController());
 
     return ListView.builder(
-      itemCount: model.groups.length,
+      itemCount: c.groups.length,
       itemBuilder: (context, index) {
-        final text = model.groups[index].name;
+        final text = c.groups[index].name;
         return GroupWidget(
           text: text,
           onTap: () {
-            Navigator.of(context).pushNamed(
-              '/GroupDetailtsScreen',
-              arguments: index,
-            );
+            Get.toNamed('/GroupDetailtsScreen', arguments: index);
           },
         );
       },

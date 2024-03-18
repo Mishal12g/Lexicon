@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lexicon/view/groups_screen/groups_list_screen.dart';
+import 'package:lexicon/view/groups_screen/groups_list/groups_list_screen.dart';
 
 class TabBarScreen extends StatefulWidget {
   const TabBarScreen({super.key});
